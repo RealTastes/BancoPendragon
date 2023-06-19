@@ -5,10 +5,11 @@ if(isset($_POST['submit'])) {
     $nome_jogo =  $_POST['nome_jogo'];
     $genero_jogo =  $_POST['genero_jogo'];
     $preco_jogo =  $_POST['preco_jogo'];
+    $prioridade =  $_POST['prioridade'];
     $pretende_comprar =  $_POST['pretende_comprar'];
 
-    $sql = "INSERT INTO `crud`(`id`, `nome_jogo`, `genero_jogo`, `preco_jogo`, `pretende_comprar`) 
-    VALUES (NULL,'$nome_jogo','$genero_jogo','$preco_jogo','$pretende_comprar')";
+    $sql = "INSERT INTO `crud`(`id`, `nome_jogo`, `genero_jogo`, `preco_jogo`, `prioridade`, `pretende_comprar`) 
+    VALUES (NULL,'$nome_jogo','$genero_jogo','$preco_jogo','$prioridade','$pretende_comprar')";
     
     $result = mysqli_query($conn, $sql);
 
@@ -78,6 +79,12 @@ if(isset($_POST['submit'])) {
                     <input type="text" class="form-control" name="preco_jogo"
                     placeholder="R$ 00,00">
                 </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Prioridade de Compra:</label>
+                    <input type="text" class="form-control" name="prioridade"
+                    placeholder="Para jogos que não serão comprados, digitar N/A">
+                </div>
 
                 <div class="form-group mb-3">
                     <label>Pretende Comprar o Jogo este mês?</label> &nbsp; <br>
@@ -88,6 +95,10 @@ if(isset($_POST['submit'])) {
                     <input type="radio" class="form-check-input" name="pretende_comprar" 
                     id="nao" value="nao">
                     <label for="nao" class="form-input-label">Não</label>
+                    &nbsp;
+                    <input type="radio" class="form-check-input" name="pretende_comprar" 
+                    id="para amigo" value="para amigo">
+                    <label for="para amigo" class="form-input-label">Sim, Para um amigo</label>
                 </div>
 
                 <div>
