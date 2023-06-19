@@ -43,6 +43,7 @@
                 <th scope="col">Nome do Jogo</th>
                 <th scope="col">Gênero do Jogo</th>
                 <th scope="col">Preço do Jogo</th>
+                <th scope="col">Prioridade de Compra</th>
                 <th scope="col">Pretende Comprar?</th>
                 <th scope="col">Ação</th>
                 </tr>
@@ -60,6 +61,7 @@
                             <td><?php echo $row['nome_jogo'] ?></td>
                             <td><?php echo $row['genero_jogo'] ?></td>
                             <td><?php echo $row['preco_jogo'] ?></td>
+                            <td><?php echo $row['prioridade'] ?></td>
                             <td><?php echo $row['pretende_comprar'] ?></td>
                             <td>
                                 <a href="edit.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
