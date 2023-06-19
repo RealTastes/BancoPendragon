@@ -41,7 +41,7 @@ CREATE TABLE `crud` (
 --
 
 INSERT INTO `crud` (`id`, `nome_jogo`, `genero_jogo`, `preco_jogo`, `prioridade`, `pretende_comprar`) VALUES
-(7, 'Metal Gear', 'Stealth', 'R$40,00', 'sim');
+(7, 'Metal Gear', 'Stealth', 'R$40,00', '1', 'sim');
 
 --
 -- Índices para tabelas despejadas
