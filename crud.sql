@@ -32,6 +32,7 @@ CREATE TABLE `crud` (
   `nome_jogo` varchar(100) NOT NULL,
   `genero_jogo` varchar(100) NOT NULL,
   `preco_jogo` varchar(100) NOT NULL,
+  `prioridade` varchar(100) NOT NULL,
   `pretende_comprar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -39,7 +40,7 @@ CREATE TABLE `crud` (
 -- Despejando dados para a tabela `crud`
 --
 
-INSERT INTO `crud` (`id`, `nome_jogo`, `genero_jogo`, `preco_jogo`, `pretende_comprar`) VALUES
+INSERT INTO `crud` (`id`, `nome_jogo`, `genero_jogo`, `preco_jogo`, `prioridade`, `pretende_comprar`) VALUES
 (7, 'Metal Gear', 'Stealth', 'R$40,00', 'sim');
 
 --
