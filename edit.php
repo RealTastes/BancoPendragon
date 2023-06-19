@@ -6,9 +6,10 @@ if(isset($_POST['submit'])) {
     $nome_jogo =  $_POST['nome_jogo'];
     $genero_jogo =  $_POST['genero_jogo'];
     $preco_jogo =  $_POST['preco_jogo'];
+    $prioridade =  $_POST['prioridade'];
     $pretende_comprar =  $_POST['pretende_comprar'];
 
-    $sql = "UPDATE `crud` SET `nome_jogo`='$nome_jogo',`genero_jogo`='$genero_jogo',`preco_jogo`='$preco_jogo',`pretende_comprar`='$pretende_comprar' 
+    $sql = "UPDATE `crud` SET `nome_jogo`='$nome_jogo',`genero_jogo`='$genero_jogo',`preco_jogo`='$preco_jogo',`prioridade`='$prioridade',`pretende_comprar`='$pretende_comprar' 
     WHERE id=$id";
     
     $result = mysqli_query($conn, $sql);
@@ -84,6 +85,12 @@ if(isset($_POST['submit'])) {
                     <input type="text" class="form-control" name="preco_jogo"
                     value="<?php echo $row['preco_jogo'] ?>">
                 </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Prioridade de Compra:</label>
+                    <input type="text" class="form-control" name="prioridade"
+                    value="<?php echo $row['prioridade'] ?>">
+                </div>
 
                 <div class="form-group mb-3">
                     <label>Pretende Comprar o Jogo este mês?</label> &nbsp; <br>
@@ -94,6 +101,10 @@ if(isset($_POST['submit'])) {
                     <input type="radio" class="form-check-input" name="pretende_comprar" 
                     id="nao" value="nao"<?php echo ($row['pretende_comprar']=='nao')? "checked":""; ?>>
                     <label for="nao" class="form-input-label">Não</label>
+                    &nbsp;
+                    <input type="radio" class="form-check-input" name="pretende_comprar" 
+                    id="para amigo" value="para amigo"<?php echo ($row['pretende_comprar']=='para amigo')? "checked":""; ?>>
+                    <label for="para amigo" class="form-input-label">Sim, para um amigo.</label>
                 </div>
 
                 <div>
